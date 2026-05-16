@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO UNTUK "TEMPAT HIBURAN KELUARGA MEDAN" -->
+    <title>Tempat Hiburan Keluarga Medan - PUL Family Hiburan</title>
+    <meta name="description" content="Tempat hiburan keluarga terbaik di Medan, harga terjangkau. Pesan sekarang via WhatsApp.">
+    <meta name="keywords" content="tempat hiburan, tempat hiburan medan, foto keluarga medan, studio foto medan, pul family">
+    <meta name="author" content="PUL Family Hiburan">
+
+    <!-- Biar bagus pas dishare ke WA/FB -->
+    <meta property="og:title" content="Tempat Hiburan Keluarga - PUL Family">
+    <meta property="og:description" content="Abadikan momen keluarga di tempat hiburan keluarga PUL Family Medan. Booking via WA!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200">
+    <meta property="og:type" content="website">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600;700&display=swap');
+        * {margin:0;padding:0;box-sizing:border-box}
+        html {scroll-behavior:smooth;scroll-padding-top:80px}
+        body {font-family:'Poppins',sans-serif;background:#fefefe;color:#333;overflow-x:hidden}
+
+      /* NAVBAR */
+   .navbar {
+            position:fixed;
+            top:0;left:0;
+            width:100%;
+            z-index:1000;
+            padding:20px 30px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            transition:.3s;
+        }
+   .navbar.scrolled {
+            background:rgba(225,225,225,0.95);
+            backdrop-filter:blur(10px);
+            box-shadow:0 2px 20px rgba(0,0,0,0.1);
+            padding:15px 30px;
+        }
+   .logo {
+            display:flex;
+            align-items:center;
+            gap:12px;
+            text-decoration:none;
+            cursor:pointer;
+            transition:.3s;
+        }
+   .logo:hover {transform:scale(1.05)}
+   .logo img {
+            width:45px;height:45px;
+            border-radius:50%;
+            object-fit:cover;
+            border:3px solid rgba(255,255,255,0.8);
+            box-shadow:0 4px 15px rgba(0,0,0,0.2);
+        }
+   .navbar.scrolled.logo img {border:3px solid #d63384}
+   .logo span {
+            font-family:'Playfair Display',serif;
+            font-size:1.8rem;
+            color:black;
+            font-weight:900;
+            text-shadow:0 2px 10px rgba(0,0,0,0.3);
+            letter-spacing:1px;
+        }
+   .navbar.scrolled.logo span {
+            color:#d63384;
+            text-shadow:none;
+        }
+   .nav-menu {
+            display:flex;
+            gap:30px;
+            list-style:none;
+        }
+   .nav-menu a {
+            color:white;
+            text-decoration:none;
+            font-weight:500;
+            font-size:1rem;
+            transition:.3s;
+            text-shadow:0 2px 10px rgba(0,0,0,0.3);
+        }
+   .navbar.scrolled.nav-menu a {
+            color:#333;
+            text-shadow:none;
+        }
+   .nav-menu a:hover {
+            color:#feca57;
+        }
+   .navbar.scrolled.nav-menu a:hover {
+            color:#d63384;
+        }
+   .hamburger {
+            display:none;
+            flex-direction:column;
+            gap:5px;
+            cursor:pointer;
+        }
+   .hamburger span {
+            width:25px;height:3px;
+            background:green;
+            border-radius:3px;
+            transition:.3s;
+        }
+   .navbar.scrolled.hamburger span {background:#333}
+
+      /* HERO BACKGROUND WARNA NYANTOL */
+   .hero {
+            height:100vh;
+            background:linear-gradient(135deg, #d63384 0%, #ff6b9d 25%, #feca57 50%, #48dbfb 75%, #1dd1a1 100%);
+            background-size:400% 400%;
+            animation:gradientJalan 8s ease infinite;
+            display:flex;align-items:center;justify-content:center;text-align:center;color:white;
+            position:relative;
+            overflow:hidden;
+        }
+   .hero::before {
+            content:'';
+            position:absolute;
+            top:0;left:0;
+            width:100%;height:100%;
+            background:rgba(0,0,0,0.3);
+            z-index:1;
+        }
+   .hero > div {
+            position:relative;
+            z-index:2;
+        }
+        @keyframes gradientJalan {
+            0% {background-position:0% 50%}
+            50% {background-position:100% 50%}
+            100% {background-position:0% 50%}
+        }
+
+   .hero h1 {
+            font-family:'Playfair Display',serif;
+            font-size:4rem;
+            margin-bottom:10px;
+            animation:fadeInDown 1.5s;
+            text-shadow:0 2px 10px rgba(0,0,0,0.3);
+            font-weight:900;
+        }
+   .hero p {font-size:1.2rem;margin-bottom:30px;animation:fadeInUp 1.5s;text-shadow:0 2px 10px rgba(0,0,0,0.3)}
+   .btn-wa-hero {
+            background:#25D366;color:white;padding:15px 35px;border-radius:50px;
+            text-decoration:none;font-weight:600;font-size:1.1rem;animation:fadeInUp 1.5s;
+            display:inline-block;transition:.3s;box-shadow:0 5px 20px rgba(0,0,0,0.2)
+        }
+   .btn-wa-hero:hover {background:#1da851;transform:scale(1.05)}
+        section {padding:80px 20px;max-width:1000px;margin:auto}
+   .title {
+            text-align:center;
+            font-size:2.5rem;
+            font-family:'Playfair Display',serif;
+            margin-bottom:50px;
+            color:#2c5f5d;
+            background:linear-gradient(135deg, #e0f7f4 0%, #c8ede9 100%);
+            padding:15px 30px;
+            border-radius:50px;
+            display:inline-block;
+            box-shadow:0 4px 15px rgba(44,95,93,0.15);
+            position:relative;
+            left:50%;
+            transform:translateX(-50%);
+            font-weight:700;
+        }
+   .title::after {
+            content:'';
+            position:absolute;
+            bottom:-10px;
+            left:50%;
+            transform:translateX(-50%);
+            width:0;
+            height:4px;
+            background:linear-gradient(90deg, #2c5f5d, #d63384, #2c5f5d);
+            border-radius:2px;
+            animation:garisJalan 3s ease-in-out infinite;
+        }
+        @keyframes garisJalan {
+            0% { width:0; left:50%; }
+            50% { width:80%; left:50%; }
+            100% { width:0; left:50%; }
+        }
+   .message-box {
+            background:#fff0f6;border-left:5px solid #d63384;padding:30px;border-radius:10px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.1);font-size:1.1rem;line-height:1.8;
+        }
+   .gallery {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+   .gallery img {
+            width:100%;
+            height:300px;
+            object-fit:cover;
+            border-radius:10px;
+            transition:.6s;
+            opacity:0;
+            transform:translateY(30px);
+            cursor:pointer;
+        }
+   .gallery img.show {
+            opacity:1;
+            transform:translateY(0);
+        }
+   .gallery img:hover {
+            transform:scale(1.05) translateY(0)!important;
+        }
+   .map-container {border-radius:15px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,0.1);margin-bottom:20px}
+   .map-container iframe {width:100%;height:400px;border:0}
+   .btn-maps {
+            display:inline-block;background:#d63384;color:white;padding:12px 30px;
+            border-radius:50px;text-decoration:none;font-weight:600;transition:.3s
+        }
+   .btn-maps:hover {background:#b02a5b;transform:translateY(-2px)}
+   .footer {background:#333;color:white;text-align:center;padding:30px}
+   .btn-music {
+            position:fixed;bottom:90px;right:20px;background:#d63384;color:white;
+            border:none;width:50px;height:50px;border-radius:50%;font-size:1.5rem;cursor:pointer;z-index:999
+        }
+   .btn-wa-float {
+            position:fixed;bottom:20px;right:20px;background:#25D366;color:white;
+            width:60px;height:60px;border-radius:50%;display:flex;align-items:center;
+            justify-content:center;font-size:2rem;text-decoration:none;z-index:999;
+            box-shadow:0 4px 15px rgba(37,211,102,0.4);animation:pulse 2s infinite
+        }
+
+        /* LIGHTBOX */
+   .lightbox {
+            display:none;
+            position:fixed;
+            z-index:9999;
+            top:0;left:0;
+            width:100%;height:100%;
+            background:rgba(0,0,0,0.9);
+            align-items:center;
+            justify-content:center;
+            flex-direction:column;
+            animation:fadeIn.3s;
+        }
+   .lightbox.show {display:flex}
+   .lightbox img {
+            max-width:90%;
+            max-height:80%;
+            border-radius:10px;
+            box-shadow:0 0 30px rgba(255,255,255,0.2);
+        }
+   .lightbox.caption {
+            color:white;
+            font-size:1.1rem;
+            margin-top:15px;
+            text-align:center;
+            padding:0 20px;
+            font-family:'Poppins',sans-serif;
+            max-width:90%;
+        }
+   .lightbox.counter {
+            position:absolute;
+            top:25px;left:30px;
+            color:white;
+            font-size:1rem;
+            background:rgba(0,0,0,0.5);
+            padding:5px 15px;
+            border-radius:20px;
+            font-family:'Poppins',sans-serif;
+        }
+   .lightbox.close {
+            position:absolute;
+            top:20px;right:30px;
+            font-size:40px;
+            color:white;
+            cursor:pointer;
+            font-weight:300;
+        }
+   .lightbox.prev,.lightbox.next {
+            position:absolute;
+            top:50%;
+            font-size:50px;
+            color:white;
+            cursor:pointer;
+            user-select:none;
+            padding:0 20px;
+            transform:translateY(-50%);
+        }
+   .lightbox.prev {left:10px}
+   .lightbox.next {right:10px}
+
+        @keyframes fadeInDown {from{opacity:0;transform:translateY(-50px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes fadeInUp {from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes pulse {0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+        @keyframes fadeIn {from{opacity:0}to{opacity:1}}
+
+        @media(max-width:768px){
+       .hero h1{font-size:2.8rem}
+       .map-container iframe{height:300px}
+       .lightbox.prev,.lightbox.next {font-size:35px}
+       .lightbox.close {font-size:30px;top:15px;right:20px}
+       .lightbox.caption {font-size:1rem}
+       .lightbox.counter {top:20px;left:20px;font-size:0.9rem}
+       .nav-menu {
+            position:fixed;
+            top:70px;right:-100%;
+            background:white;
+            flex-direction:column;
+            width:200px;
+            padding:20px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.2);
+            border-radius:10px;
+            transition:.3s;
+         }
+       .nav-menu.active {right:20px}
+       .nav-menu a {color:#333;text-shadow:none}
+       .hamburger {display:flex}
+       .navbar {padding:15px 20px}
+       .logo img {width:40px;height:40px}
+       .logo span {font-size:1.5rem}
+        }
+    </style>
+</head>
+<body>
+    <audio id="bgm" loop>
+        <source src="music/music1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="logo" onclick="scrollKeAtas()">
+            <img src="img/logo1.png" alt="Logo PUL Family">
+            <span>PUL Family</span>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#lokasi">Lokasi</a></li>
+            <li><a href="https://wa.me/6281234567890" target="_blank">Kontak</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- TOMBOL WA NGAMBANG - GANTI NOMOR LU -->
+    <a href="https://wa.me/6283133468100?text=Halo%20kak,%20saya%20mau%20tanya%20paket%20hiburan%20keluarga" target="_blank" class="btn-wa-float">💬</a>
+    <button class="btn-music" onclick="toggleMusic()">♪</button>
+
+    <div class="hero" id="home">
+        <div>
+            <h1>PUL Family Hiburan</h1>
+            <p>"Tempat Hiburan Keluarga di Medan"</p>
+            <a href="https://wa.me/6283133468100?text=Halo%20saya%20mau%20pesan%20tempat%20hiburan%20keluarga" target="_blank" class="btn-wa-hero">Pesan via WhatsApp</a>
+        </div>
+    </div>
+
+    <section id="tentang">
+        <h2 class="title">Tentang Kami</h2>
+        <div class="message-box">
+            <p>
+                Kami menyediakan jasa foto & tempat hiburan keluarga.
+                Abadikan momen hangat bersama orang tersayang dengan latar yang indah dan fotografer profesional.
+                Cocok untuk ulang tahun, anniversary, atau kumpul keluarga.<br><br>
+                
+                <b>PUL Family Hiburan</b>
+            </p>
+        </div>
+    </section>
+
+    <section id="galeri">
+        <h2 class="title">Foto-Foto</h2>
+        <div class="gallery">
+            <img src="img/img1.jpg"
+                 alt=""
+                 datacaption="">
+            <img src="img/img2.jpg"
+                 alt=""
+                 datacaption="">
+            <img src="img/img3.jpg"
+                 alt=""
+                 datacaption="">
+            <img src="img/img4.jpg"
+                 alt=""
+                 datacaption="">
+
+            <img src="img/img5.jpg"
+                 alt=""
+                 datacaption="">
+
+            <img src="img/img6.jpg"
+                 alt=""
+                 datacaption="">
+        </div>
+    </section>
+
+    <section id="lokasi">
+        <h2 class="title">Lokasi</h2>
+        <div class="map-container">
+            <!-- MAPS LAPANGAN MERDEKA MEDAN SEBAGAI CONTOH -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.998718563991!2d98.6722223147539!3d3.595195997385316!2m3!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131c3e4c6e4b1%3A0x4d0d6c0e7b8b8b8b!2sLapangan%20Merdeka%20Medan!5e0!3m2!1sid!2sid!4v1699999999999!5m2!1sid!2sid"
+            allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div style="text-align:center">
+            <p style="margin-bottom:20px"><b>PUL Family Hiburan</b><br>Jl. Karya , Karangberombak, Medan Barat, Kota Medan</p>
+            <a href="https://maps.app.goo.gl/8X8X8" target="_blank" class="btn-maps">Lihat Rute</a>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>© 2026 PUL Family Hiburan | WhatsApp: 0812-3456-7890</p>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <span class="counter" id="counterLightbox">1/6</span>
+        <span class="close" onclick="tutupLightbox()">&times;</span>
+        <span class="prev" onclick="gantiFoto(-1)">&#10094;</span>
+        <img id="imgLightbox" src="">
+        <div class="caption" id="captionLightbox"></div>
+        <span class="next" onclick="gantiFoto(1)">&#10095;</span>
+    </div>
+
+    <script>
+        // SCROLL KE ATAS PAS KLIK LOGO
+        function scrollKeAtas() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // NAVBAR GANTI WARNA PAS SCROLL + TOGGLE MENU HP
+        const navbar = document.getElementById('navbar');
+        const navMenu = document.getElementById('navMenu');
+
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 100){
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function toggleMenu() {
+            navMenu.classList.toggle('active');
+        }
+
+        // TUTUP MENU PAS KLIK LINK DI HP
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Musik
+        const bgm = document.getElementById('bgm');
+        let isPlaying = false;
+        function toggleMusic(){
+            if(isPlaying){bgm.pause();isPlaying=false}
+            else{bgm.play();isPlaying=true}
+        }
+        window.addEventListener('scroll',()=>{if(!isPlaying){bgm.play();isPlaying=true}},{once:true})
+
+        // ANIMASI GALERI MUNCUL PAS SCROLL
+        const fotoGaleri = document.querySelectorAll('.gallery img');
+        const munculinFoto = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if(entry.isIntersecting){
+                    setTimeout(() => {
+                        entry.target.classList.add('show');
+                    }, index * 150);
+                    munculinFoto.unobserve(entry.target);
+                }
+            });
+        }, {threshold: 0.2});
+        fotoGaleri.forEach(foto => { munculinFoto.observe(foto); });
+
+        // LIGHTBOX
+        const lightbox = document.getElementById('lightbox');
+        const imgLightbox = document.getElementById('imgLightbox');
+        const captionLightbox = document.getElementById('captionLightbox');
+        const counterLightbox = document.getElementById('counterLightbox');
+        let fotoIndex = 0;
+        const semuaFoto = Array.from(document.querySelectorAll('.gallery img'));
+
+        semuaFoto.forEach((foto, i) => {
+            foto.addEventListener('click', () => {
+                lightbox.classList.add('show');
+                imgLightbox.src = foto.src;
+                captionLightbox.textContent = foto.dataset.caption || foto.alt;
+                fotoIndex = i;
+                updateCounter();
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function tutupLightbox() {
+            lightbox.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateCounter() {
+            counterLightbox.textContent = `${fotoIndex + 1}/${semuaFoto.length}`;
+        }
+
+        function gantiFoto(arah) {
+            fotoIndex += arah;
+            if(fotoIndex >= semuaFoto.length) fotoIndex = 0;
+            if(fotoIndex < 0) fotoIndex = semuaFoto.length - 1;
+            imgLightbox.src = semuaFoto[fotoIndex].src;
+            captionLightbox.textContent = semuaFoto[fotoIndex].dataset.caption || semuaFoto[fotoIndex].alt;
+            updateCounter();
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if(e.key === 'Escape') tutupLightbox();
+            if(e.key === 'ArrowLeft') gantiFoto(-1);
+            if(e.key === 'ArrowRight') gantiFoto(1);
+        });
+        lightbox.addEventListener('click', (e) => {
+            if(e.target === lightbox) tutupLightbox();
+        });
+    </script>
+</body>
+</html>
